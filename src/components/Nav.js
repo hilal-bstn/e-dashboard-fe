@@ -10,19 +10,24 @@ const Nav=()=>{
     }
     return(
         <div>
-            <ul className='nav-ul'>
-                <li><Link to="/">Products</Link></li>
-                <li><Link to="/add">Add Product</Link></li>
-                <li><Link to="/update">Update Product</Link></li>
-                <li><Link to="/profile">Profile</Link></li>
-                {
-                    auth ?<li><Link onClick={logout} to="/signup">logout</Link></li>
-                    :<>
+            <img 
+            alt="logo"
+            className='logo'
+            src='https://st2.depositphotos.com/1186248/5903/i/950/depositphotos_59038425-stock-photo-demo.jpg'></img>
+           {auth ? 
+                <ul className='nav-ul'>
+                    <li><Link to="/">Products</Link></li>
+                    <li><Link to="/add">Add Product</Link></li>
+                    <li><Link to="/update">Update Product</Link></li>
+                    <li><Link to="/profile">Profile</Link></li>
+                    <li><Link onClick={logout} to="/signup">Logout ({JSON.parse(auth).name})</Link></li>
+                </ul>
+                :
+                <ul className='nav-ul nav-rigth'>
                     <li><Link to="/signup">Sign Up</Link></li>
                     <li><Link to="/login">Login</Link></li>
-                    </>
-                }
-            </ul>
+                </ul>
+            }
         </div>
     )
 }
