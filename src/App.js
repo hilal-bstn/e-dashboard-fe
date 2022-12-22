@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 import PrivateComponent from './components/PrivateComponent';
 import Login from './components/Login';
-import AddProduct from './components/AddProject';
+import AddProduct from './components/AddProduct';
 import ProductList from './components/ProductList';
 
 function App() {
